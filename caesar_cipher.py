@@ -3,16 +3,16 @@ def caesar_cipher(text, shift):
 
     for char in text:
         if char.isalpha():
-            # Handle uppercase letters
+            
             if char.isupper():
                 result += chr((ord(char) - ord('A') + shift) % 26 + ord('A'))
 
-            # Handle lowercase letters
+            
             else:
                 result += chr((ord(char) - ord('a') + shift) % 26 + ord('a'))
 
         else:
-            # Keep spaces, numbers and symbols unchanged
+            
             result += char
 
     return result
